@@ -1,10 +1,10 @@
 <?php
 session_start();
 
+include 'includes/passwords.inc';
 include 'includes/settings.inc';
 include 'includes/header.inc';
 include 'includes/sendmail.inc';
-include 'includes/passwords.inc';
 
 $ZHAWSendMail = new ZHAWSendMail();
 
