@@ -1,12 +1,12 @@
 <?php
 class DrawHeaderAndFooter
 {
-	public static function drawHeader() {
+	public static function drawHeader($title) {
 		echo '<!DOCTYPE html>
 				<html lang="de_CH">
 				<head>
 				<meta charset="utf-8">
-				<title>PHP und MySQL - eine Einführung</title>
+				<title>'.$title.'</title>
 				<!--[if IE]>
 				<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
 				</script>

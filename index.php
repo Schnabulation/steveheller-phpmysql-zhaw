@@ -8,7 +8,7 @@ include 'includes/sendmail.inc';
 
 $ZHAWSendMail = new ZHAWSendMail();
 
-DrawHeaderAndFooter::drawHeader();
+DrawHeaderAndFooter::drawHeader("PHP und MySQL - eine Einführung");
 
 echo "
   <header>
