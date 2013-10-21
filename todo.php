@@ -5,9 +5,10 @@ include 'includes/header.inc';
 include 'includes/sendmail.inc';
 
 $connection = new PDO('mysql:host=localhost;dbname=todo_list', user, pass);
+
 if (isset($_POST["Name"])) {
 	if (strcmp($_POST["Name"],"") != 0) {
-		$connection->exec("INSERT into entries ('Name', 'Done') values ('".$_POST["Name"]."','0')");
+		$connection->exec("INSERT INTO entries (Name, Done) VALUES ('".$_POST["Name"]."', '0')");
 	}
 }
 
