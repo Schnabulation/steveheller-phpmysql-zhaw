@@ -44,6 +44,5 @@ if (isset($_POST["gesendet"])) {
 	$ZHAWSendMail->sendMailTo("steve.heller@schnabulation.ch", "ZHAW // PHP und MySQL", "Das E-Mail wurde erfolgreich versendet!");
 }
 
-
 DrawHeaderAndFooter::drawFooter();
 ?>
