@@ -1,0 +1,23 @@
+Aufgabe 5:
+Wenn der User einen Lesezugriff auf die Datenbank absetzt, erhält er die
+entsprechenden Daten. Nun wird mit diesen Daten die Geschäftslogik ausgeführt.
+Möglicherweise werden nun Änderungen in die Datenbank zurückgeschrieben.
+Nun kann es vorkommen, dass die Daten, welche im ersten Schritt gelesen wurden
+im bereits zwischenzeitlich geändert wurden.
+Um dies zu verhindern, wird beim optimistischen Locking eine Versionsnummer
+in der Datenbank mitgeführt. Ändert sich zwischen dem Lese- und dem
+Schreibzugriff die Versionsnummer, darf die Änderung nicht in die Datenbank
+geschrieben werden.
+
+Aufgabe 6:
+Ein Deadlock tritt dann auf, wenn ein Prozess 1 auf eine Ressource wartet, die
+einem anderen Prozess 2 zugewiesen ist. Dieser Prozess gibt die Ressource aber
+nicht frei, weil er auf eine Ressource des Prozesses 1 wartet.
+So stecken beide Prozesse fest und können nicht weiter operieren.
+
+Aufgabe 7:
+Es kann verhindert werden, dass ein User A Daten von User B überschreibt.
+Beispielsweise hat User A Daten gelesen, dann liest User B die selben Daten.
+Nun schreibt User A eine neue Version seiner Daten in die DB. Jetzt möchte
+auch User B seine Daten speichern und würde die Änderungen von User A
+überschreiben. 
