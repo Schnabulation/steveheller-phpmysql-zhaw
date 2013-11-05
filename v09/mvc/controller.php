@@ -20,7 +20,12 @@ class Controller {
 				break;
 				
 			case 'edit':
-				
+				if (isset($get["id"])) {
+					$this->edit($get["id"]);
+				} else {
+					
+				}
+				break;
 			default:
 				$this->showNoGet();	
 		}
@@ -34,11 +39,15 @@ class Controller {
 	}
 	
 	public function show($id) {
-		$this->view->displayEntry(model::getEntry($id));
+		$this->view->displayEntry(model::getEntry($id-1)); // id um eines erhöhen, da das Array mit 0 startet
 	}
 	
 	public function showNoGet() {
 		$this->view->displayText("No GET parm!");
+	}
+	
+	public function edit($id) {
+		model::editEntries($id, "Neuer Titel", "Neuer Content");
 	}
 	
 }
