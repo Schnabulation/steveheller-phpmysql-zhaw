@@ -1,0 +1,65 @@
+2013/11/18 22:14:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "something".' in /vagrant/v09/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/v09/framework/web/CWebApplication.php(141): CWebApplication->runController('something')
+#1 /vagrant/v09/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /vagrant/yii_new/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii_new/index.php?r=something
+---
+2013/11/18 22:16:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hellosomething".' in /vagrant/v09/framework/web/CController.php:483
+Stack trace:
+#0 /vagrant/v09/framework/web/CController.php(270): CController->missingAction('hellosomething')
+#1 /vagrant/v09/framework/web/CWebApplication.php(282): CController->run('hellosomething')
+#2 /vagrant/v09/framework/web/CWebApplication.php(141): CWebApplication->runController('message/helloso...')
+#3 /vagrant/v09/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /vagrant/yii_new/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii_new/index.php?r=message/hellosomething
+---
+2013/11/18 22:23:55 [error] [php] Undefined variable: time (/vagrant/yii_new/protected/views/message/helloWorld.php:8)
+Stack trace:
+#0 /vagrant/v09/framework/web/CController.php(869): MessageController->renderFile()
+#1 /vagrant/v09/framework/web/CController.php(782): MessageController->renderPartial()
+#2 /vagrant/yii_new/protected/controllers/MessageController.php(8): MessageController->render()
+#3 /vagrant/v09/framework/web/actions/CInlineAction.php(49): MessageController->actionHelloWorld()
+#4 /vagrant/v09/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /vagrant/v09/framework/web/CController.php(286): MessageController->runAction()
+#6 /vagrant/v09/framework/web/CController.php(265): MessageController->runActionWithFilters()
+#7 /vagrant/v09/framework/web/CWebApplication.php(282): MessageController->run()
+#8 /vagrant/v09/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /vagrant/v09/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /vagrant/yii_new/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii_new/index.php?r=message/helloWorld
+in /vagrant/yii_new/protected/views/message/helloWorld.php (8)
+in /vagrant/yii_new/protected/controllers/MessageController.php (8)
+in /vagrant/yii_new/index.php (13)
+2013/11/18 22:25:39 [error] [exception.CException] exception 'CException' with message 'MessageController cannot find the requested view "".' in /vagrant/v09/framework/web/CController.php:878
+Stack trace:
+#0 /vagrant/v09/framework/web/CController.php(782): CController->renderPartial('', NULL, true)
+#1 /vagrant/yii_new/protected/controllers/MessageController.php(18): CController->render('')
+#2 /vagrant/v09/framework/web/actions/CInlineAction.php(49): MessageController->actionGoodbye()
+#3 /vagrant/v09/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /vagrant/v09/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /vagrant/v09/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /vagrant/v09/framework/web/CWebApplication.php(282): CController->run('goodbye')
+#7 /vagrant/v09/framework/web/CWebApplication.php(141): CWebApplication->runController('message/goodbye')
+#8 /vagrant/v09/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /vagrant/yii_new/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii_new/index.php?r=message/goodbye
+---
+2013/11/18 22:25:59 [error] [exception.CException] exception 'CException' with message 'MessageController cannot find the requested view "goodbye".' in /vagrant/v09/framework/web/CController.php:878
+Stack trace:
+#0 /vagrant/v09/framework/web/CController.php(782): CController->renderPartial('goodbye', NULL, true)
+#1 /vagrant/yii_new/protected/controllers/MessageController.php(18): CController->render('goodbye')
+#2 /vagrant/v09/framework/web/actions/CInlineAction.php(49): MessageController->actionGoodbye()
+#3 /vagrant/v09/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /vagrant/v09/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /vagrant/v09/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /vagrant/v09/framework/web/CWebApplication.php(282): CController->run('goodbye')
+#7 /vagrant/v09/framework/web/CWebApplication.php(141): CWebApplication->runController('message/goodbye')
+#8 /vagrant/v09/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /vagrant/yii_new/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii_new/index.php?r=message/goodbye
+---

@@ -16,4 +16,7 @@ echo 'phpmyadmin phpmyadmin/mysql/admin-pass password virtual' | debconf-set-sel
 echo 'phpmyadmin phpmyadmin/mysql/app-pass password virtual' | debconf-set-selections
 echo 'phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2' | debconf-set-selections
 sudo apt-get install -q -y phpmyadmin
+sudo apt-get install -y pear
+sudo pear channel-discover pear.phpunit.de
+sudo pear install phpunit/PHPUnit
 sudo service apache2 reload
