@@ -383,20 +383,42 @@ class Kanton {
 	}
 	
 	public function getKantonSortedByName() {
-		
+		usort($this->kantone, function($a, $b) {
+			if ($a['Kanton'] == $b['Kanton']) {
+				return 0;
+			}
+			return ($a['Kanton'] < $b['Kanton']) ? -1 : 1;
+		});
 	}
 	
 	public function getKantonSortedByHauptort() {
-		
+		usort($this->kantone, function($a, $b) {
+			if ($a['Hauptort'] == $b['Hauptort']) {
+				return 0;
+			}
+			return ($a['Hauptort'] < $b['Hauptort']) ? -1 : 1;
+		});
 	}
 	
 	public function getKantonSortedByEinwohner() {
-		
+		usort($this->kantone, function($a, $b) {
+			if ($a['Einwohner 1'] == $b['Einwohner 1']) {
+				return 0;
+			}
+			return ($a['Einwohner 1'] < $b['Einwohner 1']) ? -1 : 1;
+		});
 	}
 	
-	public function getKantonSortedByBeitritt() {
-		
+	public function  getKantonSortedByBeitritt() {
+		usort($this->kantone, function($a, $b) {
+			if ($a['Beitritt'] == $b['Beitritt']) {
+				return 0;
+			}
+			return ($a['Beitritt'] < $b['Beitritt']) ? -1 : 1;
+		});
 	}
+	
+	
 }
 
 
