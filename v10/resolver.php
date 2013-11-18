@@ -1,25 +1,34 @@
 <?php
 
-http://localhost/kantone/resolver.php?service=kantone&methode=single&id=zh
+require_once "kanton.php";
 
+$kanton = new Kanton();
+$error = 0;
 
 
 switch ($_GET["service"]) {
 	case 'kantone':
-		if (isset($get["id"])) {
-			$this->show($get["id"]);
-		} else {
-			$this->showAll();
-		}
-		break;
-
-	case 'edit':
-		if (isset($get["id"])) {
-			$this->edit($get["id"]);
-		} else {
+		switch ($_GET["methode"]) {
+			case 'single':
+				print_r($kanton->getKantonByKennzeichen($_GET["id"]));
+				break;
 				
+			case 'list':
+				print_r($kanton->getKantonArray());
+				break;
+				
+			default:
+				echo "Bitte valide URL eintippen";
+				$error = 1;
+				break;
 		}
 		break;
-	default:
-		echo "Please select a method";
+		
+		default:
+			if ($error == 0) {
+				echo "Bitte valide URL eintippen";
+			}
+			break;
 }
+
+?>
