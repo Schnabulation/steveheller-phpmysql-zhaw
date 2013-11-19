@@ -1,33 +1,31 @@
 <?php
 
 require_once "kanton.php";
+require_once "view.php";
 
 $kanton = new Kanton();
-$error = 0;
+$view = new View();
 
 
 switch ($_GET["service"]) {
 	case 'kantone':
 		switch ($_GET["methode"]) {
 			case 'single':
-				print_r($kanton->getKantonByKennzeichen($_GET["id"]));
+				$view->printJson($kanton->getKantonByKennzeichen($_GET["id"]));
 				break;
 				
 			case 'list':
-				print_r($kanton->getKantonArray());
+				$view->printJson($kanton->getKantonArray());
 				break;
 				
 			default:
-				echo "Bitte valide URL eintippen";
-				$error = 1;
-				break;
+			$view->printErrorText("Bitte den Parameter \"Methode\" korrekt angeben");
+			break;
 		}
 		break;
 		
 		default:
-			if ($error == 0) {
-				echo "Bitte valide URL eintippen";
-			}
+			$view->printErrorText("Bitte den Parameter \"Service\" korrekt angeben");
 			break;
 }
 
