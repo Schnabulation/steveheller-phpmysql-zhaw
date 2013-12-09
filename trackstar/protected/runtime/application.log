@@ -109,3 +109,200 @@ Stack trace:
 REQUEST_URI=/trackstar/index.php?r=project/admin
 HTTP_REFERER=http://localhost:8888/trackstar/index.php?r=project/view&id=1
 ---
+2013/12/09 15:29:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Issue".' in /vagrant/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Issue')
+#1 /vagrant/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /vagrant/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=Issue
+---
+2013/12/09 15:29:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "issue/show".' in /vagrant/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('issue/show')
+#1 /vagrant/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /vagrant/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/show
+---
+2013/12/09 15:30:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "issue".' in /vagrant/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('issue')
+#1 /vagrant/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /vagrant/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=issue
+---
+2013/12/09 15:30:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "issues".' in /vagrant/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('issues')
+#1 /vagrant/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /vagrant/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=issues
+---
+2013/12/09 15:30:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "issue".' in /vagrant/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('issue')
+#1 /vagrant/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /vagrant/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=issue
+---
+2013/12/09 15:31:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user".' in /vagrant/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('user')
+#1 /vagrant/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /vagrant/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=user
+---
+2013/12/09 15:42:26 [error] [exception.CException] exception 'CException' with message 'Issue and its behaviors do not have a method or closure named "getTypeOptions".' in /vagrant/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /vagrant/yii/framework/db/ar/CActiveRecord.php(227): CComponent->__call('getTypeOptions', Array)
+#1 /vagrant/trackstar/protected/views/issue/_form.php(42): CActiveRecord->__call('getTypeOptions', Array)
+#2 /vagrant/trackstar/protected/views/issue/_form.php(42): Issue->getTypeOptions()
+#3 /vagrant/yii/framework/web/CBaseController.php(126): require('/vagrant/tracks...')
+#4 /vagrant/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/vagrant/tracks...', Array, true)
+#5 /vagrant/yii/framework/web/CController.php(869): CBaseController->renderFile('/vagrant/tracks...', Array, true)
+#6 /vagrant/trackstar/protected/views/issue/create.php(18): CController->renderPartial('_form', Array)
+#7 /vagrant/yii/framework/web/CBaseController.php(126): require('/vagrant/tracks...')
+#8 /vagrant/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/vagrant/tracks...', Array, true)
+#9 /vagrant/yii/framework/web/CController.php(869): CBaseController->renderFile('/vagrant/tracks...', Array, true)
+#10 /vagrant/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#11 /vagrant/trackstar/protected/controllers/IssueController.php(79): CController->render('create', Array)
+#12 /vagrant/yii/framework/web/actions/CInlineAction.php(49): IssueController->actionCreate()
+#13 /vagrant/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#14 /vagrant/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 /vagrant/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /vagrant/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 /vagrant/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 /vagrant/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 /vagrant/yii/framework/web/CController.php(291): CFilterChain->run()
+#20 /vagrant/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 /vagrant/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#22 /vagrant/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('issue/create')
+#23 /vagrant/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#24 /vagrant/trackstar/index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/create
+HTTP_REFERER=http://localhost:8888/trackstar/index.php?r=site/login
+---
+2013/12/09 15:44:55 [error] [php] Missing argument 3 for CActiveForm::dropDownList(), called in /vagrant/trackstar/protected/views/issue/_form.php on line 42 and defined (/vagrant/yii/framework/web/widgets/CActiveForm.php:845)
+Stack trace:
+#0 /vagrant/yii/framework/web/CBaseController.php(95): IssueController->renderInternal()
+#1 /vagrant/yii/framework/web/CController.php(869): IssueController->renderFile()
+#2 /vagrant/trackstar/protected/views/issue/create.php(18): IssueController->renderPartial()
+#3 /vagrant/yii/framework/web/CBaseController.php(126): require()
+#4 /vagrant/yii/framework/web/CBaseController.php(95): IssueController->renderInternal()
+#5 /vagrant/yii/framework/web/CController.php(869): IssueController->renderFile()
+#6 /vagrant/yii/framework/web/CController.php(782): IssueController->renderPartial()
+#7 /vagrant/trackstar/protected/controllers/IssueController.php(79): IssueController->render()
+#8 /vagrant/yii/framework/web/actions/CInlineAction.php(49): IssueController->actionCreate()
+#9 /vagrant/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /vagrant/yii/framework/web/filters/CFilterChain.php(133): IssueController->runAction()
+#11 /vagrant/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /vagrant/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#13 /vagrant/yii/framework/web/filters/CInlineFilter.php(58): IssueController->filterAccessControl()
+#14 /vagrant/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#15 /vagrant/yii/framework/web/CController.php(291): CFilterChain->run()
+#16 /vagrant/yii/framework/web/CController.php(265): IssueController->runActionWithFilters()
+#17 /vagrant/yii/framework/web/CWebApplication.php(282): IssueController->run()
+#18 /vagrant/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#19 /vagrant/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#20 /vagrant/trackstar/index.php(13): CWebApplication->run()
+REQUEST_URI=/trackstar/index.php?r=issue/create
+in /vagrant/trackstar/protected/views/issue/_form.php (42)
+in /vagrant/trackstar/protected/views/issue/create.php (18)
+in /vagrant/trackstar/protected/controllers/IssueController.php (79)
+2013/12/09 15:53:09 [error] [exception.CException] exception 'CException' with message 'Issue and its behaviors do not have a method or closure named "getTypeOptions".' in /vagrant/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /vagrant/yii/framework/db/ar/CActiveRecord.php(227): CComponent->__call('getTypeOptions', Array)
+#1 /vagrant/trackstar/protected/views/issue/_form.php(42): CActiveRecord->__call('getTypeOptions', Array)
+#2 /vagrant/trackstar/protected/views/issue/_form.php(42): Issue->getTypeOptions()
+#3 /vagrant/yii/framework/web/CBaseController.php(126): require('/vagrant/tracks...')
+#4 /vagrant/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/vagrant/tracks...', Array, true)
+#5 /vagrant/yii/framework/web/CController.php(869): CBaseController->renderFile('/vagrant/tracks...', Array, true)
+#6 /vagrant/trackstar/protected/views/issue/create.php(18): CController->renderPartial('_form', Array)
+#7 /vagrant/yii/framework/web/CBaseController.php(126): require('/vagrant/tracks...')
+#8 /vagrant/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/vagrant/tracks...', Array, true)
+#9 /vagrant/yii/framework/web/CController.php(869): CBaseController->renderFile('/vagrant/tracks...', Array, true)
+#10 /vagrant/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#11 /vagrant/trackstar/protected/controllers/IssueController.php(79): CController->render('create', Array)
+#12 /vagrant/yii/framework/web/actions/CInlineAction.php(49): IssueController->actionCreate()
+#13 /vagrant/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#14 /vagrant/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 /vagrant/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /vagrant/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 /vagrant/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 /vagrant/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 /vagrant/yii/framework/web/CController.php(291): CFilterChain->run()
+#20 /vagrant/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 /vagrant/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#22 /vagrant/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('issue/create')
+#23 /vagrant/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#24 /vagrant/trackstar/index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/create
+---
+2013/12/09 16:00:10 [error] [exception.CException] exception 'CException' with message 'Issue and its behaviors do not have a method or closure named "getTypeOptions".' in /vagrant/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /vagrant/yii/framework/db/ar/CActiveRecord.php(227): CComponent->__call('getTypeOptions', Array)
+#1 /vagrant/trackstar/protected/views/issue/_form.php(42): CActiveRecord->__call('getTypeOptions', Array)
+#2 /vagrant/trackstar/protected/views/issue/_form.php(42): Issue->getTypeOptions()
+#3 /vagrant/yii/framework/web/CBaseController.php(126): require('/vagrant/tracks...')
+#4 /vagrant/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/vagrant/tracks...', Array, true)
+#5 /vagrant/yii/framework/web/CController.php(869): CBaseController->renderFile('/vagrant/tracks...', Array, true)
+#6 /vagrant/trackstar/protected/views/issue/create.php(18): CController->renderPartial('_form', Array)
+#7 /vagrant/yii/framework/web/CBaseController.php(126): require('/vagrant/tracks...')
+#8 /vagrant/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/vagrant/tracks...', Array, true)
+#9 /vagrant/yii/framework/web/CController.php(869): CBaseController->renderFile('/vagrant/tracks...', Array, true)
+#10 /vagrant/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#11 /vagrant/trackstar/protected/controllers/IssueController.php(79): CController->render('create', Array)
+#12 /vagrant/yii/framework/web/actions/CInlineAction.php(49): IssueController->actionCreate()
+#13 /vagrant/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#14 /vagrant/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 /vagrant/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /vagrant/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 /vagrant/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 /vagrant/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 /vagrant/yii/framework/web/CController.php(291): CFilterChain->run()
+#20 /vagrant/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 /vagrant/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#22 /vagrant/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('issue/create')
+#23 /vagrant/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#24 /vagrant/trackstar/index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/create
+---
+2013/12/09 16:00:17 [error] [exception.CException] exception 'CException' with message 'Issue and its behaviors do not have a method or closure named "getTypeOptions".' in /vagrant/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /vagrant/yii/framework/db/ar/CActiveRecord.php(227): CComponent->__call('getTypeOptions', Array)
+#1 /vagrant/trackstar/protected/views/issue/_form.php(42): CActiveRecord->__call('getTypeOptions', Array)
+#2 /vagrant/trackstar/protected/views/issue/_form.php(42): Issue->getTypeOptions()
+#3 /vagrant/yii/framework/web/CBaseController.php(126): require('/vagrant/tracks...')
+#4 /vagrant/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/vagrant/tracks...', Array, true)
+#5 /vagrant/yii/framework/web/CController.php(869): CBaseController->renderFile('/vagrant/tracks...', Array, true)
+#6 /vagrant/trackstar/protected/views/issue/create.php(18): CController->renderPartial('_form', Array)
+#7 /vagrant/yii/framework/web/CBaseController.php(126): require('/vagrant/tracks...')
+#8 /vagrant/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/vagrant/tracks...', Array, true)
+#9 /vagrant/yii/framework/web/CController.php(869): CBaseController->renderFile('/vagrant/tracks...', Array, true)
+#10 /vagrant/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#11 /vagrant/trackstar/protected/controllers/IssueController.php(79): CController->render('create', Array)
+#12 /vagrant/yii/framework/web/actions/CInlineAction.php(49): IssueController->actionCreate()
+#13 /vagrant/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#14 /vagrant/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 /vagrant/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /vagrant/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 /vagrant/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 /vagrant/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 /vagrant/yii/framework/web/CController.php(291): CFilterChain->run()
+#20 /vagrant/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 /vagrant/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#22 /vagrant/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('issue/create')
+#23 /vagrant/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#24 /vagrant/trackstar/index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/create
+HTTP_REFERER=http://localhost:8888/trackstar/index.php?r=issue
+---
